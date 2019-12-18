@@ -1,0 +1,29 @@
+# 配置工作流
+name: 工作流
+# 在 pull request 时执行
+on: pull_request
+
+# 配置工作
+jobs:
+  # build 工作
+  build:
+    # 命名
+    name: 项目构建
+    # 工作策略
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    # 运行于策略系统
+    runs-on: ${{ matrix.os }}
+    # 配置工作步骤
+    steps:
+    - name: 检出代码
+      uses: actions/checkout@master
+
+    - name: 安装JDK
+      uses: actions/setup-java@master
+      with:
+        java-version: 1.8
+
+    - name: 构建
+      run: mvn -B package --file pom.xml
