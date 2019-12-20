@@ -15,16 +15,6 @@ jobs:
         os: [ubuntu-latest, ubuntu-16.04]
     # 运行于策略系统
     runs-on: ${{ matrix.os }}
-    # 配置需要的镜像
-    services:
-      # 配置 mysql 镜像
-      mysql:
-        image: mysql:5.7.28
-        env:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: app
-        ports:
-          - 3306:3306
     # 配置工作步骤
     steps:
     - name: 检出代码
