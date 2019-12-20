@@ -12,7 +12,7 @@ jobs:
     # 工作策略
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest, ubuntu-16.04]
     # 运行于策略系统
     runs-on: ${{ matrix.os }}
     # 配置需要的镜像
