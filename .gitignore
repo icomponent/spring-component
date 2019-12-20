@@ -1,4 +1,5 @@
 *.iml
 .idea/
 target/
+config/
 .DS_Store
