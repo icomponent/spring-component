@@ -25,5 +25,8 @@ jobs:
       with:
         java-version: 1.8
 
+    - name: 配置数据库
+      run: mysql -e 'CREATE DATABASE IF NOT EXISTS app default charset utf8mb4 COLLATE utf8mb4_general_ci;' -u root
+
     - name: 构建
       run: mvn -B package --file pom.xml
