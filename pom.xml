@@ -56,20 +56,6 @@
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>阿里云</id>
-            <name>阿里云镜像</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <build>
         <plugins>
             <plugin>
