@@ -21,10 +21,11 @@ jobs:
       mysql:
         image: mysql:5.7.28
         env:
-          MYSQL_DATABASE: app
           MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: app
         ports:
-          - 3306
+          - 3306:3306
+        command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
     # 配置工作步骤
     steps:
     - name: 检出代码
