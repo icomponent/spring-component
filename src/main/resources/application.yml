@@ -8,3 +8,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
+  # 启用 flyway
+  flyway:
+    enabled: true
