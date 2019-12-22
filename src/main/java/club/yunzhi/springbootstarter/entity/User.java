@@ -1,6 +1,5 @@
 package club.yunzhi.springbootstarter.entity;
 
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,7 +8,6 @@ import javax.persistence.*;
 @Entity
 @Data
 @NoArgsConstructor
-@Builder
 public class User {
 
     @Id
