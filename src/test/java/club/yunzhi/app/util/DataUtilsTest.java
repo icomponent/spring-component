@@ -1,4 +1,4 @@
-package club.yunzhi.springbootstarter.util;
+package club.yunzhi.app.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;

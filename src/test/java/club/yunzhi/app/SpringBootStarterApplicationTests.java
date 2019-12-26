@@ -1,4 +1,4 @@
-package club.yunzhi.springbootstarter;
+package club.yunzhi.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
