@@ -1,4 +1,4 @@
-package club.yunzhi.springbootstarter.entity;
+package club.yunzhi.app.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

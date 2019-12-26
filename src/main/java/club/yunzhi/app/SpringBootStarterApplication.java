@@ -1,4 +1,4 @@
-package club.yunzhi.springbootstarter;
+package club.yunzhi.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
