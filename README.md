@@ -1,1 +1,3 @@
-# <img src="images/spring-framework.png" width="25" height="25"> Spring Component
+# <img src="images/spring-framework.png" width="60" height="60">
+
+## Spring Component
