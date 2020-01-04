@@ -12,5 +12,5 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":spring-core"))
+    implementation(project(":core") as Object)
 }
