@@ -1,6 +1,3 @@
 rootProject.name = 'spring'
 include 'core'
 include 'app'
-include 'spec'
-include 'spec-test'
-
