@@ -32,6 +32,7 @@ public class Spec<T> {
 
     public Spec(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
         this.kit = new Kit<>(root, query, builder);
+        this.type = ConnectionType.NONE;
     }
 
     /**
