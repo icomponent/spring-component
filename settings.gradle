@@ -1,3 +1,6 @@
 rootProject.name = 'spring'
 include 'core'
 include 'app'
+include 'auth'
+include 'common'
+

@@ -1,0 +1,6 @@
+flyway:
+  auth:
+    url: jdbc:mysql://127.0.0.1:3306/auth?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password:
+    location: db/migration/auth

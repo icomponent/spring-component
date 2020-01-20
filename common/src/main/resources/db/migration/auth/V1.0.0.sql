@@ -1,0 +1,7 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+CREATE TABLE user (
+    name varchar(255)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
+SET FOREIGN_KEY_CHECKS = 1;
