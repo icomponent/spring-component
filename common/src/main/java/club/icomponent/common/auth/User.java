@@ -5,7 +5,7 @@ package club.icomponent.common.auth;
  */
 public class User {
 
-    private String uuid;
+    private String id;
 
     private String name;
 
@@ -16,12 +16,12 @@ public class User {
     public User() {
     }
 
-    public String getUuid() {
-        return uuid;
+    public String getId() {
+        return id;
     }
 
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
