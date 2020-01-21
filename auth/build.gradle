@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.2.3.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
+    id 'java-library'
 }
 
 group 'club.icomponent'
@@ -14,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":common") as Object)
+    api project(':common')
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
     runtimeOnly 'mysql:mysql-connector-java'
