@@ -26,8 +26,5 @@ class RandomUtilsTest {
 
         random = RandomUtils.randomString(size, RandomUtils.ALPHA_NUM);
         assertThat(random.length()).isEqualTo(size);
-
-        random = RandomUtils.randomString(size, "αβγδεζηθικλμνξοπρςστυφχψω");
-        assertThat(random.length()).isEqualTo(size);
     }
 }
