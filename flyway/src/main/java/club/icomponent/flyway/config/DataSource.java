@@ -1,4 +1,4 @@
-package club.icomponent.common.config;
+package club.icomponent.flyway.config;
 
 /**
  * 数据源配置

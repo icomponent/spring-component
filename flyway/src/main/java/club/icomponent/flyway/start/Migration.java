@@ -1,6 +1,6 @@
-package club.icomponent.common.start;
+package club.icomponent.flyway.start;
 
-import club.icomponent.common.config.DataSource;
+import club.icomponent.flyway.config.DataSource;
 import org.flywaydb.core.Flyway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
