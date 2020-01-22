@@ -6,15 +6,6 @@ jobs:
   build:
     name: Project Test And Build
     runs-on: ubuntu-latest
-    services:
-      mysql:
-        name: mysql
-        image: mysql:5.7
-        env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
-        ports:
-          - 3309:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -22,5 +13,5 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: View docker images
-        run: docker ps
+      - name: Shutdown default mysql
+        run: sudo service mysql stop
