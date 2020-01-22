@@ -14,8 +14,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-configuration-processor'
-    implementation 'org.flywaydb:flyway-core'
     runtimeOnly 'mysql:mysql-connector-java'
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.flywaydb:flyway-core'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 }
