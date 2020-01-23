@@ -32,3 +32,4 @@ jobs:
       - name: Create mysql database table
         run: |
           gradle flyway:bootRun
+          gradle core:test
