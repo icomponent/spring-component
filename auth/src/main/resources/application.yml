@@ -1,8 +1,20 @@
 spring:
+  profiles:
+    active: github
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+---
+spring:
+  profiles: develop
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/auth?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
     password:
-mybatis:
-  configuration:
-    map-underscore-to-camel-case: true
+---
+spring:
+  profiles: github
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3307/auth?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
