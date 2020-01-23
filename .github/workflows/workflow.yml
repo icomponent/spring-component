@@ -29,10 +29,13 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Create mysql database table
-        run: |
-          gradle flyway:bootRun
-          gradle core:test
-          gradle common:test
-          gradle auth:test
-          gradle app:test
+      - name: Flyway module migration database
+        run: gradle flyway:bootRun
+      - name: Test core module
+        run: gradle core:test
+      - name: Test common module
+        run: gradle common:test
+      - name: Test auth module
+        run: gradle auth:test
+      - name: Test app module
+        run: gradle app:test
