@@ -1,6 +1,12 @@
 name: Java CI Workflow
 
-on: pull_request
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
@@ -9,9 +15,20 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Shutdown default mysql
+        run: sudo service mysql stop
+      - name: Create mysql database auth
+        uses: icomponent/mysql-action@master
+        with:
+          VERSION: 5.7
+          CONTAINER_NAME: mysql
+          PORT_MAPPING: 3307:3306
+          ROOT_PASSWORD: root
+          DATABASE: auth
       - name: Install jdk 1.8
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Shutdown default mysql
-        run: sudo service mysql stop
+      - name: Create mysql database table
+        run: |
+          gradle flyway:bootRun
