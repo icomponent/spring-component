@@ -1,6 +1,6 @@
-package club.icomponent.util;
+package club.icomponent.core.util;
 
-import club.icomponent.lang.Nullable;
+import club.icomponent.core.lang.Nullable;
 
 /**
  * 字符串工具类

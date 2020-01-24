@@ -1,4 +1,4 @@
-package club.icomponent.lang;
+package club.icomponent.core.lang;
 
 import javax.annotation.Nonnull;
 import javax.annotation.meta.TypeQualifierNickname;

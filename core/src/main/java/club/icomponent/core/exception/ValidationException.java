@@ -1,4 +1,11 @@
 package club.icomponent.core.exception;
 
-public class ValidationException {
+/**
+ * 数据验证异常
+ */
+public class ValidationException extends RuntimeException {
+
+    public ValidationException(String message) {
+        super(message);
+    }
 }
