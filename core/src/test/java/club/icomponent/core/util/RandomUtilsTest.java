@@ -1,4 +1,4 @@
-package club.icomponent.util;
+package club.icomponent.core.util;
 
 import org.junit.jupiter.api.Test;
 
