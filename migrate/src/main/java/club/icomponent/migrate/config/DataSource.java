@@ -1,4 +1,4 @@
-package club.icomponent.flyway.config;
+package club.icomponent.migrate.config;
 
 /**
  * 数据源配置
