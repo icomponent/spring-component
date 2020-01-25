@@ -1,6 +1,6 @@
 package club.icomponent.auth.mapper;
 
-import club.icomponent.common.auth.User;
+import club.icomponent.common.data.auth.User;
 import club.icomponent.core.util.RandomUtils;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;

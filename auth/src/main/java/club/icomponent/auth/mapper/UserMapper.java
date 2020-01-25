@@ -1,6 +1,6 @@
 package club.icomponent.auth.mapper;
 
-import club.icomponent.common.auth.User;
+import club.icomponent.common.data.auth.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
