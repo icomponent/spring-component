@@ -1,7 +1,8 @@
 rootProject.name = 'spring'
 include 'core'
-include 'app'
 include 'auth'
 include 'common'
-include 'flyway'
-
+include 'migrate'
+include 'music'
+include 'music:gateway'
+findProject(':music:gateway')?.name = 'gateway'

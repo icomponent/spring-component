@@ -10,14 +10,14 @@ on:
 
 jobs:
   build:
-    name: Project Test And Build
+    name: Project Test
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Shutdown default mysql
+      - name: Shutdown Default MySQL
         run: sudo service mysql stop
-      - name: Create mysql database auth
+      - name: Create MySQL Database Auth
         uses: icomponent/mysql-action@master
         with:
           VERSION: 5.7
@@ -25,17 +25,15 @@ jobs:
           PORT_MAPPING: 3307:3306
           ROOT_PASSWORD: root
           DATABASE: auth
-      - name: Install jdk 1.8
+      - name: Install JDK 1.8
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Flyway module migration database
-        run: gradle flyway:bootRun
-      - name: Test core module
+      - name: Migrate Module
+        run: gradle migrate:bootRun
+      - name: Core Module
         run: gradle core:test
-      - name: Test common module
+      - name: Common Module
         run: gradle common:test
-      - name: Test auth module
+      - name: Auth Module
         run: gradle auth:test
-      - name: Test app module
-        run: gradle app:test

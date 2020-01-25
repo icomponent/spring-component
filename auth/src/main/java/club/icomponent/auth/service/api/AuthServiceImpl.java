@@ -2,7 +2,7 @@ package club.icomponent.auth.service.api;
 
 import club.icomponent.auth.mapper.UserMapper;
 import club.icomponent.auth.service.AuthService;
-import club.icomponent.common.auth.User;
+import club.icomponent.common.data.auth.User;
 import club.icomponent.common.transfer.auth.TraditionalUser;
 import club.icomponent.core.exception.AuthenticationException;
 import org.slf4j.Logger;

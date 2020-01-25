@@ -1,4 +1,4 @@
-package club.icomponent.common.auth;
+package club.icomponent.common.data.auth;
 
 /**
  * 用户实体

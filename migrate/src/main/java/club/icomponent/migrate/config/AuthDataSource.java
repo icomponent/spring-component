@@ -1,4 +1,4 @@
-package club.icomponent.flyway.config;
+package club.icomponent.migrate.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
