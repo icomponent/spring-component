@@ -12,5 +12,5 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.springframework.cloud:spring-cloud-starter-oauth2:2.2.0.RELEASE'
 }
