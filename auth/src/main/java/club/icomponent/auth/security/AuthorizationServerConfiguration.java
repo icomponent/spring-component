@@ -28,7 +28,8 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 .withClient("music")
                 .secret(passwordEncoder.encode("music-secret"))
                 .authorizedGrantTypes("authorization_code", "refresh_token")
-                .scopes("all");
+                .scopes("all")
+                .redirectUris("http://example.com");
     }
 
     @Override
