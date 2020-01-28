@@ -29,6 +29,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 .secret(passwordEncoder.encode("music-secret"))
                 .authorizedGrantTypes("authorization_code", "refresh_token")
                 .scopes("all")
+                .resourceIds("music")
                 .redirectUris("http://example.com");
     }
 
@@ -40,7 +41,6 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) {
-        security.tokenKeyAccess("permitAll()")
-                .checkTokenAccess("isAuthenticated()");
+        security.checkTokenAccess("isAuthenticated()");
     }
 }

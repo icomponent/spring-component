@@ -5,8 +5,5 @@ security:
     client:
       client-id: music
       client-secret: music-secret
-      user-authorization-uri: http://127.0.0.1:8000/oauth/authorize
-      access-token-uri: http://127.0.0.1:8000/oauth/token
     resource:
-      jwt:
-        key-uri: http://127.0.0.1:8000/oauth/token_key
+      token-info-uri: http://127.0.0.1:8000/oauth/check_token
