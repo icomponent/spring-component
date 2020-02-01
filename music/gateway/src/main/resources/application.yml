@@ -1,9 +1,0 @@
-server:
-  port: 8100
-security:
-  oauth2:
-    client:
-      client-id: music
-      client-secret: music-secret
-    resource:
-      token-info-uri: http://127.0.0.1:8000/oauth/check_token

@@ -1,21 +1,6 @@
-spring:
-  profiles:
-    active: github
----
-spring:
-  profiles: develop
 flyway:
   auth:
-    url: jdbc:mysql://127.0.0.1:3306/auth?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: root
-    password:
-    location: db/migration/auth
----
-spring:
-  profiles: github
-flyway:
-  auth:
-    url: jdbc:mysql://127.0.0.1:3307/auth?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://127.0.0.1:3306/auth?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
     password: root
     location: db/migration/auth

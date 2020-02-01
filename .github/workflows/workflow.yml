@@ -17,14 +17,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Shutdown Default MySQL
         run: sudo service mysql stop
-      - name: Create MySQL Database Auth
+      - name: Install MySQL Database
         uses: icomponent/mysql-action@master
         with:
           VERSION: 5.7
           CONTAINER_NAME: mysql
-          PORT_MAPPING: 3307:3306
+          PORT_MAPPING: 3306:3306
           ROOT_PASSWORD: root
-          DATABASE: auth
       - name: Install JDK 1.8
         uses: actions/setup-java@v1
         with:
