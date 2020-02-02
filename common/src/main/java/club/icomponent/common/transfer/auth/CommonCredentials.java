@@ -1,9 +1,12 @@
 package club.icomponent.common.transfer.auth;
 
+import club.icomponent.core.spec.Validation;
+import club.icomponent.core.util.StringUtils;
+
 /**
  * 普通登录凭证
  */
-public class CommonCredentials {
+public class CommonCredentials implements Validation {
 
     /** 用户名 */
     private String username;
@@ -28,5 +31,11 @@ public class CommonCredentials {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public boolean valid() {
+        return !StringUtils.isEmpty(username)
+                && !StringUtils.isEmpty(password);
     }
 }
