@@ -38,10 +38,11 @@ public class JwtUtils {
      * @param jwt jwt令牌
      * @return 令牌内声明信息
      */
-    public static Claims parseRS256Jwt(PublicKey publicKey, String jwt) {
-        return Jwts.parser()
+    public static <T> T parseRS256Jwt(PublicKey publicKey, String jwt, Class<T> clazz) {
+        Claims claims = Jwts.parser()
                 .setSigningKey(publicKey)
                 .parseClaimsJws(jwt)
                 .getBody();
+        return JSON.parseObject(claims.getSubject(), clazz);
     }
 }
