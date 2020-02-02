@@ -5,8 +5,10 @@ package club.icomponent.common.transfer.auth;
  */
 public class CommonCredentials {
 
+    /** 用户名 */
     private String username;
 
+    /** 密码 */
     private String password;
 
     public CommonCredentials() {
