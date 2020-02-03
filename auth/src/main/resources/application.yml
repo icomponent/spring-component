@@ -8,3 +8,30 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/auth?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
     password: root
+app:
+  encrypt:
+    rsa:
+      public-key: |
+        -----BEGIN PUBLIC KEY-----
+        MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnzdIMghyY4/S+EyeBkLZn3Jhl
+        uU7znx2zAdbEDdBPKgJgQRO/8SGClP4csjet0zmrCUdMfMmq/W1PsiqdCQkM58yn
+        s++MY6tlIONAN2Qy4EcoRCzZQO+exRPKppbAOMdVxqiczXLmlJ7zBtxSKxttyjPj
+        YZC8ljZD/0NYZPGigwIDAQAB
+        -----END PUBLIC KEY-----
+      private-key: |
+        -----BEGIN PRIVATE KEY-----
+        MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKfN0gyCHJjj9L4T
+        J4GQtmfcmGW5TvOfHbMB1sQN0E8qAmBBE7/xIYKU/hyyN63TOasJR0x8yar9bU+y
+        Kp0JCQznzKez74xjq2Ug40A3ZDLgRyhELNlA757FE8qmlsA4x1XGqJzNcuaUnvMG
+        3FIrG23KM+NhkLyWNkP/Q1hk8aKDAgMBAAECgYB3ncs2qWUzQ4QKHmNSA9NTFDf6
+        g28ZUPp9yTjMBsDQPbT14k3uzDfD+uttj0kLev+nwXR2vJmRbxgF8I5Z5L/ysF39
+        9oxUI2Nt6D9KehXCyCmTaClb7+De/8+DykZ9dIoB1I8hie5y7T10FT8o5Ki8fvV/
+        M9QmTjkppdR83tQhAQJBANiiRQDLf9KgejihLD4RD/wb+YhS1w5Xhpq8iDOolIYy
+        rdlyYH8+l636A7O/8sDWX9nbzHDWrjWYnWB1IKKveoECQQDGTACY7ICFUXftIlGP
+        M5nK4J8IaUWkSkbAPlm+p3uSL+FeSEevy1JIoGa7MWGrFj6/xtGyHNQyP6aoorRO
+        u7MDAkAvqmSsbBpP6ed6llv5vB9cRXt+N1wCV9fSLDF7zFgBvxzpf3UkCk2thhlS
+        b6WmMIUelnJBUbs7J71Y/+ySXzIBAkEAvGZVYvXAnenrYVfr2XyTL9f+AQXT7uXL
+        FremmKeTli77lpJh2bn5cZtEP7IJM32tHJQPg4Q0b5FeDHaZjPx0dQJAHB+f1VvN
+        HMJsPE0aLh+pC3P/644ksZ7mF1QXbqnhi5ifesczZabsNSQFq+aHEnpLAu7NxMqj
+        XqV/B+QmgI2IRg==
+        -----END PRIVATE KEY-----
