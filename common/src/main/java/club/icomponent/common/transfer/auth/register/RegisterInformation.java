@@ -1,9 +1,12 @@
 package club.icomponent.common.transfer.auth.register;
 
+import club.icomponent.core.spec.Validation;
+import club.icomponent.core.util.StringUtils;
+
 /**
  * 用户注册信息
  */
-public class RegisterInformation {
+public class RegisterInformation implements Validation {
 
     /**
      * 用户名
@@ -58,5 +61,13 @@ public class RegisterInformation {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    @Override
+    public boolean valid() {
+        return !StringUtils.isEmpty(username)
+                && !StringUtils.isEmpty(password)
+                && StringUtils.isEmail(email)
+                && !StringUtils.isEmpty(code);
     }
 }
