@@ -1,4 +1,4 @@
-package club.icomponent.common.transfer.auth;
+package club.icomponent.common.transfer.auth.login;
 
 import club.icomponent.core.spec.Validation;
 import club.icomponent.core.util.StringUtils;
