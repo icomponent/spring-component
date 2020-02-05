@@ -4,8 +4,7 @@ import club.icomponent.auth.mapper.UserMapper;
 import club.icomponent.auth.properties.EncryptRSAProperties;
 import club.icomponent.auth.service.AuthService;
 import club.icomponent.common.data.auth.User;
-import club.icomponent.common.transfer.auth.AuthToken;
-import club.icomponent.common.transfer.auth.CommonCredentials;
+import club.icomponent.common.transfer.auth.login.AuthToken;
 import club.icomponent.core.exception.AuthenticationException;
 import club.icomponent.core.exception.EntityNotFoundException;
 import club.icomponent.core.util.JwtUtils;
@@ -32,12 +31,8 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public AuthToken login(CommonCredentials credentials) {
-        logger.debug("获取用户名密码");
-        String username = credentials.getUsername();
-        String password = credentials.getPassword();
-
-        logger.debug("查询");
+    public AuthToken login(String username, String password) {
+        logger.debug("查询用户");
         User user = this.userMapper.selectUserByUsername(username).orElseThrow(() -> new EntityNotFoundException("用户不存在"));
 
         logger.debug("校验密码正确性");

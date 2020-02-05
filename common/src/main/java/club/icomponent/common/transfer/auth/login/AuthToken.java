@@ -1,4 +1,4 @@
-package club.icomponent.common.transfer.auth;
+package club.icomponent.common.transfer.auth.login;
 
 /**
  * 认证令牌信息
