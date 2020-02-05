@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class KeyUtilsTest {
 
     @Test
-    void parsePublicKeyTest() throws Exception {
+    void parseRSAPublicKey() throws Exception {
         final String value = "-----BEGIN PUBLIC KEY-----\n" +
                 "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC35L4ns9xKDHYqlbvGF82vDWZM\n" +
                 "Kijgfsf3Iwb8J3FyW4SOT9XK7Op94t+8FZdnq5TY7/O9TjUCwMGfEEiSQMKRyAGv\n" +
@@ -27,7 +27,7 @@ class KeyUtilsTest {
     }
 
     @Test
-    void parsePrivateKeyTest() throws Exception {
+    void parseRSAPrivateKey() throws Exception {
         final String value = "-----BEGIN PRIVATE KEY-----\n" +
                 "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALfkviez3EoMdiqV\n" +
                 "u8YXza8NZkwqKOB+x/cjBvwncXJbhI5P1crs6n3i37wVl2erlNjv871ONQLAwZ8Q\n" +
