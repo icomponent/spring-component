@@ -29,6 +29,6 @@ public class LoginController {
         ValidationUtils.validate(credentials);
 
         logger.debug("登录");
-        return authService.login(credentials);
+        return authService.login(credentials.getUsername(), credentials.getPassword());
     }
 }
