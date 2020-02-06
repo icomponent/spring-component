@@ -1,7 +1,7 @@
 package club.icomponent.auth.controller;
 
 import club.icomponent.auth.service.UserService;
-import club.icomponent.common.transfer.auth.register.RegisterInformation;
+import club.icomponent.common.transfer.auth.RegisterInformation;
 import club.icomponent.core.util.ValidationUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

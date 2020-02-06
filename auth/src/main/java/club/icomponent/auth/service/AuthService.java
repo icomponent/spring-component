@@ -1,6 +1,6 @@
 package club.icomponent.auth.service;
 
-import club.icomponent.common.transfer.auth.login.AuthToken;
+import club.icomponent.common.transfer.auth.AuthToken;
 
 /**
  * 用户认证服务

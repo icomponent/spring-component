@@ -4,7 +4,7 @@ import club.icomponent.auth.mapper.UserMapper;
 import club.icomponent.auth.properties.EncryptRSAProperties;
 import club.icomponent.auth.service.AuthService;
 import club.icomponent.common.data.auth.User;
-import club.icomponent.common.transfer.auth.login.AuthToken;
+import club.icomponent.common.transfer.auth.AuthToken;
 import club.icomponent.core.exception.AuthenticationException;
 import club.icomponent.core.exception.EntityNotFoundException;
 import club.icomponent.core.util.JwtUtils;

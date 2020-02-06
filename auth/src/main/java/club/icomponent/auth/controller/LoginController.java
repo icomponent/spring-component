@@ -1,8 +1,8 @@
 package club.icomponent.auth.controller;
 
 import club.icomponent.auth.service.AuthService;
-import club.icomponent.common.transfer.auth.login.AuthToken;
-import club.icomponent.common.transfer.auth.login.CommonCredentials;
+import club.icomponent.common.transfer.auth.AuthToken;
+import club.icomponent.common.transfer.auth.CommonCredentials;
 import club.icomponent.core.util.ValidationUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
