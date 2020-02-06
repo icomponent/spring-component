@@ -46,8 +46,8 @@ public class AuthServiceImpl implements AuthService {
         logger.debug("设置access_token过期时间为2小时");
         long accessTokenExpiration = 2 * 60 * 60 * 1000;
 
-        logger.debug("签发access_token");
-        String accessToken = JwtUtils.signRS256Jwt(privateKey, user, accessTokenExpiration);
+        logger.debug("签发含有用户id信息的access_token");
+        String accessToken = JwtUtils.signRS256Jwt(privateKey, user.getId(), accessTokenExpiration);
         // 签发JWT token.
         // access_token 非对称加密 -> user + 2小时
         // refresh_token 对称加密 -> username + 30天
