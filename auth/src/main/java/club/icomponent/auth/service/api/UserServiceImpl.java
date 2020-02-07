@@ -30,6 +30,6 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         user.setUsername(username);
         user.setPassword(passwordEncoder.encode(password));
-        // TODO: userMapper.insert
+        userMapper.insert(user);
     }
 }
