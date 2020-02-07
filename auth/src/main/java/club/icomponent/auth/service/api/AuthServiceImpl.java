@@ -36,7 +36,7 @@ public class AuthServiceImpl implements AuthService {
         User user = this.userMapper.selectUserByUsername(username).orElseThrow(() -> new EntityNotFoundException("用户不存在"));
 
         logger.debug("校验密码正确性");
-        if (!user.getPassword().equals(passwordEncoder.encode(password))) {
+        if (!passwordEncoder.matches(password, user.getPassword())) {
             throw new AuthenticationException("密码错误");
         }
 
