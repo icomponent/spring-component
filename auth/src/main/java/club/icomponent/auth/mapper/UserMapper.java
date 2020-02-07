@@ -13,6 +13,9 @@ public interface UserMapper {
     @Insert("INSERT INTO user(username, password) VALUES(#{username}, #{password})")
     void insert(User user);
 
+    @Select("SELECT EXISTS(SELECT temp FROM user WHERE username=#{username})")
+    Boolean existsUserByUsername(String username);
+
     @Select("SELECT * FROM user WHERE username=#{username}")
     Optional<User> selectUserByUsername(String username);
 }
