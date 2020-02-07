@@ -3,6 +3,7 @@ package club.icomponent.auth.service.api;
 import club.icomponent.auth.mapper.UserMapper;
 import club.icomponent.auth.service.UserService;
 import club.icomponent.common.data.auth.User;
+import club.icomponent.core.exception.DataIntegrityViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -24,12 +25,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public void register(String username, String password) {
         logger.debug("校验用户名是否重复");
-        // TODO: userMapper.exist
+        if (userMapper.existsUserByUsername(username)) {
+            throw new DataIntegrityViolationException("用户名已存在");
+        }
 
         logger.debug("用户注册");
         User user = new User();
         user.setUsername(username);
         user.setPassword(passwordEncoder.encode(password));
-        // TODO: userMapper.insert
+        userMapper.insert(user);
     }
 }

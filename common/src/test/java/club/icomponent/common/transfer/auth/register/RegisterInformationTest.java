@@ -1,5 +1,6 @@
 package club.icomponent.common.transfer.auth.register;
 
+import club.icomponent.common.transfer.auth.RegisterInformation;
 import club.icomponent.core.util.RandomUtils;
 import club.icomponent.core.util.ValidationUtils;
 import org.junit.jupiter.api.Test;
