@@ -1,5 +1,0 @@
-rootProject.name = 'spring-project'
-include 'auth'
-include 'common'
-include 'core'
-include 'migrate'
