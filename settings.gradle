@@ -1,1 +1,8 @@
 rootProject.name = 'spring-stack'
+
+include 'auth-data'
+include 'auth-transfer'
+include 'auth-api'
+include 'auth-core'
+include 'auth-common'
+
