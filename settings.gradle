@@ -1,1 +1,6 @@
 rootProject.name = 'api'
+
+include 'passport-api'
+include 'passport-common'
+include 'passport-data'
+include 'passport-service'
