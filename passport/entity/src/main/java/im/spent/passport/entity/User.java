@@ -1,4 +1,4 @@
-package im.spent.passport.common;
+package im.spent.passport.entity;
 
 import java.util.Calendar;
 

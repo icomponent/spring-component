@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'java-library'
 }
 
 group 'im.spent'
@@ -13,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    api project(':passport-common')
-    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.2'
+    compile project(':passport:passport-entity')
     compile 'tk.mybatis:mapper-spring-boot-starter:2.1.5'
+    compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.2'
 }

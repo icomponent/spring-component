@@ -1,9 +1,19 @@
 rootProject.name = 'api'
 
-include 'passport-api'
-include 'passport-common'
-include 'passport-data'
-include 'passport-mapper'
-include 'passport-service'
-include 'passport-target'
-include 'passport-transfer'
+include 'passport:api'
+findProject(':passport:api')?.name = 'passport-api'
+
+include 'passport:entity'
+findProject(':passport:entity')?.name = 'passport-entity'
+
+include 'passport:mapper'
+findProject(':passport:mapper')?.name = 'passport-mapper'
+
+include 'passport:service'
+findProject(':passport:service')?.name = 'passport-service'
+
+include 'passport:target'
+findProject(':passport:target')?.name = 'passport-target'
+
+include 'passport:transfer'
+findProject(':passport:transfer')?.name = 'passport-transfer'

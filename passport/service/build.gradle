@@ -1,8 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.6.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
-    id 'java-library'
 }
 
 group 'im.spent'
@@ -15,6 +12,5 @@ repositories {
 }
 
 dependencies {
-    api project(':passport-mapper')
-    compile 'org.springframework.boot:spring-boot-starter'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
