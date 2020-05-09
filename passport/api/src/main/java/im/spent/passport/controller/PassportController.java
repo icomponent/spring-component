@@ -17,5 +17,6 @@ public class PassportController {
     @ApiOperation(value = "用户登录", notes = "用户登录", httpMethod = "POST")
     @PostMapping("login")
     public void login(@ApiParam(name = "普通登录凭证", value = "普通登录凭证", required = true) @RequestBody CommonLoginCredentials credentials) {
+        credentials.checkValid();
     }
 }

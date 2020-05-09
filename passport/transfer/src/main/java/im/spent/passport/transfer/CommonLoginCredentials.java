@@ -1,5 +1,7 @@
 package im.spent.passport.transfer;
 
+import im.spent.core.exception.InvalidArgumentException;
+import im.spent.core.validate.Validatable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -7,7 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
  * 普通登录凭证
  */
 @ApiModel(value = "普通登录凭证")
-public class CommonLoginCredentials {
+public class CommonLoginCredentials implements Validatable {
 
     /**
      * 账户
@@ -38,5 +40,9 @@ public class CommonLoginCredentials {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public void checkValid() throws InvalidArgumentException {
     }
 }
